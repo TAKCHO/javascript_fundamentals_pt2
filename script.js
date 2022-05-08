@@ -269,7 +269,7 @@ console.log(newBill, tips); */
 //     "teacher",
 //     ["Michael", "Peter", "Steven"]
 // ];
-
+/* 
 const jonas = {
     firstName: "Jonas",
     lastName: "Giorgo",
@@ -302,4 +302,49 @@ console.log(jonas);
 
 // Challenge
 
-console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}`);
+console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}`); */
+
+
+/*  */
+
+const jonas = {
+    firstName: "Jonas",
+    lastName: "Giorgo",
+    birthyear: 1997,
+    job: "teacher",
+    friends: ["Michael", "Peter", "Steven"],
+    hasDriversLicense: true,
+
+    // calcAge: function (birthyear) {
+    //     return 2022 - birthyear;
+    // }
+
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2022 - this.birthyear;
+    // }
+
+    calcAge: function () {
+        this.age = 2022 - this.birthyear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he
+        has ${this.hasDriversLicense ? "a" : "no"} driver's license.`
+    }
+};
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+
+// console.log(jonas["calcAge"](1997));
+
+/* Challenge */
+// "jonas is a 46 year old teacher, and he has a friver's license"
+
+console.log(jonas.getSummary());
