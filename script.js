@@ -260,7 +260,7 @@ const totals = [newBill[0] + tips[0], newBill[1] + tips[1], newBill[2] + tips[2]
 console.log(newBill, tips); */
 
 
-// objects
+// introduction to objects
 
 // const jonasArray = [
 //     "Jonas",
@@ -353,7 +353,7 @@ console.log(jonas.age);
 
 // Coding Challenge 3
 
-const mark = {
+/* const mark = {
     fullName: "Mark Miller",
     mass: 78,
     height: 1.69,
@@ -380,9 +380,157 @@ john.calcBMI();
 console.log(john.bmi);
 
 if (mark.bmi > john.bmi) {
-    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than 
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than
 ${john.fullName}'s BMI (${john.bmi})`);
 } else if (john.bmi > mark.bmi) {
-    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than 
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than
 ${mark.fullName}'s BMI (${mark.bmi})`);
+} */
+
+// console.log("Lifting weights repetition 1");
+// console.log("Lifting weights repetition 2");
+// console.log("Lifting weights repetition 3");
+// console.log("Lifting weights repetition 4");
+// console.log("Lifting weights repetition 5");
+// console.log("Lifting weights repetition 6");
+// console.log("Lifting weights repetition 7");
+// console.log("Lifting weights repetition 8");
+// console.log("Lifting weights repetition 9");
+// console.log("Lifting weights repetition 10");
+
+
+// for loop keeps running while condition is TRUE
+/* for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
 }
+
+const jonas = [
+    "Jonas",
+    "Giorgo",
+    2022 - 1997,
+    "teacher",
+    ["Michael", "Peter", "Steven"]
+];
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+    console.log(jonas[i], typeof jonas[i]);
+
+
+    // filling types array
+    // types[i] = typeof jonas[i];
+
+    types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2010];
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+    ages.push(2022 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+//  only strings
+console.log('--- ONLY STRING ---')
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] !== "string") continue;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+
+// break with numbers
+console.log('--- BREAK WITH NUMBER ---')
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === "number") break;
+
+    console.log(jonas[i], typeof jonas[i]);
+} */
+
+// FOR LOOP
+
+// const jonas = [
+//     "Jonas",
+//     "Giorgo",
+//     2022 - 1997,
+//     "teacher",
+//     ["Michael", "Peter", "Steven"]
+// ];
+
+// // 0, 1, ...., 4
+// // 4, 3, ...., 0
+
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//     console.log(i, jonas[i]);
+// }
+
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//     console.log(`------------Starting exercise ${exercise}`);
+
+//     for (let rep = 1; rep < 6; rep++) {
+//         console.log(`Lifting weight repetition ${rep}`);
+//     }
+// }
+
+/* While loop */
+
+
+/* For loop */
+/* for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+} */
+
+
+/* While loop */
+/* let rep = 1;
+while (rep <= 10) {
+    // console.log(`Lifting weights repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log("Loop is about to end...");
+} */
+
+/* Challenge 4 */
+
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+
+}
+
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        // sum = sum + arr[i];
+        sum += arr[i];
+    }
+    console.log(sum);
+    return sum / arr.length;
+}
+console.log(calcAverage[2, 3, 6]);
+console.log(calcAverage(totals));
