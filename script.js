@@ -236,3 +236,25 @@ if (friends.includes("Peter")) {
 }
 
  */
+
+/* Challenge 2 */
+
+/* const bill = 100;
+const calcTip = bill * 0.15;
+if (bill >= 50 && bill <= 300) {
+    console.log(`The tip is ${calcTip}`);
+} else {
+    console.log(`The tip is 20 % and is ${bill * 0.2}`);
+}
+ */
+// another way to do it
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const newBill = [125, 555, 44];
+const tips = [calcTip(newBill[0]), calcTip(newBill[1]), calcTip(newBill[2])];
+
+const totals = [newBill[0] + tips[0], newBill[1] + tips[1], newBill[2] + tips[2]];
+
+console.log(newBill, tips);
