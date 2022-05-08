@@ -248,7 +248,7 @@ if (bill >= 50 && bill <= 300) {
 }
  */
 // another way to do it
-const calcTip = function (bill) {
+/* const calcTip = function (bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
 
@@ -257,4 +257,49 @@ const tips = [calcTip(newBill[0]), calcTip(newBill[1]), calcTip(newBill[2])];
 
 const totals = [newBill[0] + tips[0], newBill[1] + tips[1], newBill[2] + tips[2]];
 
-console.log(newBill, tips);
+console.log(newBill, tips); */
+
+
+// objects
+
+// const jonasArray = [
+//     "Jonas",
+//     "Giorgo",
+//     2022 - 1997,
+//     "teacher",
+//     ["Michael", "Peter", "Steven"]
+// ];
+
+const jonas = {
+    firstName: "Jonas",
+    lastName: "Giorgo",
+    age: 2022 - 1997,
+    job: "teacher",
+    friends: ["Michael", "Peter", "Steven"]
+};
+
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+
+const interestedIN = prompt("What do you want to know about Jonas? Choose between firstNAme, lastName, age, job and friends");
+
+if (jonas[interestedIN]) {
+    console.log(jonas[interestedIN]);
+} else {
+    console.log("Wronf request!,Choose between firstNAme, lastName, age, job and friends")
+}
+
+jonas.location = "Georgia";
+jonas["twitter"] = "@tako"
+console.log(jonas);
+
+// Challenge
+
+console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}`);
